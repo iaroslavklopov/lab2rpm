@@ -1,0 +1,43 @@
+﻿<Window x:Class="lab2rpm.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab2rpm"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Menu Background="DarkGray" BorderBrush="Black" BorderThickness="1" Height="20" VerticalAlignment="Top">
+            <MenuItem Header="Background color" MouseEnter="BgEnter" MouseLeave="BgLeave">
+                <ListBox x:Name="BgChanged" SelectedIndex = "0" SelectionChanged="ComboBox_SelectionChanged" >
+                    <ListBoxItem Content="White" />
+                    <ListBoxItem Content="Light gray" />
+                    <ListBoxItem Content="Dark gray" />
+                    <ListBoxItem Content="Black" />
+                </ListBox>
+            </MenuItem>
+            <MenuItem Header="About us" Click="AboutUs" MouseEnter="AboutUsEnter" MouseLeave="MenuItem_MouseLeave"/>
+            <MenuItem Header="Close" Click="CloseClick" MouseEnter="MenuItem_MouseEnter" MouseLeave="MenuItem_MouseLeave_1"/>
+        </Menu>
+        <ToolBar Height="40" VerticalAlignment="Top" Margin="0,21,0,0">
+            <Button Click="Zalivkabtn">
+                <Image Source="C:\Users\KLOPO\source\repos\lab2rpm\ico\zalivka.png" Width="30" Height="30"></Image>
+            </Button>
+            <Button Click="AboutUsbtn">
+                <Image Source="C:\Users\KLOPO\source\repos\lab2rpm\ico\aboutus.png" Width="30" Height="30"></Image>
+            </Button>
+            <Button Click="Closebtn">
+                <Image Source="C:\Users\KLOPO\source\repos\lab2rpm\ico\close.png" Width="30" Height="30"></Image>
+            </Button>
+
+        </ToolBar>
+        <StatusBar Grid.Row="1" VerticalAlignment="Bottom">
+            <TextBlock x:Name="TextStrSost"/>
+            
+        </StatusBar>
+    </Grid>
+</Window>
